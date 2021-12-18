@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Blog</title>
+	<style type="text/css">
+		a {
+			color: white;
+			cursor: pointer;
+			position: fixed;
+			user-select: none;
+			padding-top: 25px;
+			text-align: center;
+			border-radius: 16px;
+			padding-left: 100px;
+			padding-bottom: 25px;
+			padding-right: 100px;
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+	<a>Let Us All Be Friends</a>
+</body>
+<script type="text/javascript">
+	window.addEventListener("load", offset);
+	window.addEventListener("resize", offset);
+	let friends = document.getElementsByTagName("a")[0];
+	friends.addEventListener("mouseup", openLink);
+	friends.onmousedown = function(e) {if (e.button==1) {return false}};
+
+	function offset() {
+		friends.style.left = window.innerWidth / 2 - friends.offsetWidth / 2 + "px";
+		friends.style.top = window.innerHeight / 2 - friends.offsetHeight / 2 + "px";
+	}
+
+	function openLink(link) {
+		switch (link.button) {
+			case 0:
+				window.location = "let-us-all-be-friends";
+				break;
+			case 1:
+				window.open("let-us-all-be-friends")
+		}
+	}
+</script>
+</html>

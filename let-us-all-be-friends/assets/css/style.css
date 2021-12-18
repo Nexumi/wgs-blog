@@ -1,0 +1,224 @@
+::-webkit-scrollbar {
+	width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgba(0, 0, 0, 0.6);
+	border-radius: 2.5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: rgba(0, 0, 0, 0.3);
+}
+
+/* Main Blog */
+
+.main {
+	width: 680px;
+	margin: auto;
+	margin-top: 50px;
+}
+
+@media (max-width: 680px) {
+	.main {
+		width: 90%;
+	}
+}
+
+.url {
+	cursor: pointer;
+}
+
+.pfp {
+	float: left;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+}
+
+pre {
+	float: left;
+	margin-top: 5px;
+	margin-left: 10px;
+}
+
+hr {
+	clear: left;
+	background-color: black;
+	border: 1px solid black;
+}
+
+p {
+	line-height: 2.0;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.quote {
+	margin: auto;
+	width: 500px;
+	color: gray;
+}
+
+@media (max-width: 500px) {
+	.quote {
+		width: 90%;
+	}
+}
+
+.bottom {
+	width: 100%;
+	height: 82.4px;
+	margin-top: 50px;
+	background-color: black;
+}
+
+.links {
+	color: white;
+	width: 400px;
+	margin: auto;
+}
+
+@media (max-width: 400px) {
+	.links {
+		width: 100%;
+	}
+}
+
+.pad {
+	margin: 0px;
+	margin: 32px;
+	text-align: center;
+	line-height: normal;
+}
+
+.author {
+	float: left;
+}
+
+.resources {
+	float: right;
+}
+
+@media (max-width: 300px) {
+	.bottom {
+		height: 164.8px;
+	}
+
+	.author {
+		float: none;
+	}
+
+	.resources {
+		float: none;
+	}
+}
+
+/* Author Bio */
+
+.back {
+	top: 0;
+	margin: 0;
+	left: 10px;
+	cursor: pointer;
+	position: fixed;
+	user-select: none;
+}
+
+.bio {
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+#title {
+	opacity: 0;
+	text-align: center;
+	animation-name: title;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes title {
+	100% {
+		opacity: 1;
+	}
+}
+
+#info {
+	opacity: 0;
+	float: left;
+	width: 360px;
+	font-size: 23px;
+	margin-top: 75px;
+	animation-delay: 1s;
+	animation-name: info;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes info {
+	100% {
+		opacity: 1;
+		margin-top: 25px;
+	}
+}
+
+#jimmy {
+	opacity: 0;
+	float: right;
+	width: 300px;
+	height: auto;
+	margin-right: -50px;
+	animation-delay: 2s;
+	animation-name: jimmy;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes jimmy {
+	100% {
+		opacity: 1;
+		margin-right: 0px;
+	}
+}
+
+/* Works Cited */
+
+.cite {
+	opacity: 0;
+	margin-left: 48px;
+	text-indent: -48px;
+	animation-name: cite;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+#one {
+	animation-delay: 1s;
+}
+
+#two {
+	animation-delay: 1.5s;
+}
+
+#three {
+	animation-delay: 2s;
+}
+
+#four {
+	animation-delay: 2.5s;
+}
+
+@keyframes cite {
+	100% {
+		opacity: 1;
+	}
+}
+
+.stamp {
+	bottom: 0;
+	margin: 0;
+	right: 5px;
+	cursor: default;
+	position: fixed;
+	user-select: none;
+}

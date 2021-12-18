@@ -1,0 +1,1 @@
+document.getElementsByClassName("back")[0].addEventListener("click", function() {window.location = "..";})

@@ -5,11 +5,11 @@ for (let i = 0; i < links.length; i++) {
 	links[i].addEventListener("mouseup", openLink);
 	links[i].onmousedown = function(e) {if (e.button==1) {return false}};
 
-	if (i == 1) {
+	if (i <= 2) {
 		links[i].style.color = "blue";
 	}
 
-	if (i >= 1 && i <=3) {
+	if (i >= 1 && i <=4) {
 		links[i].hover = false;
 		links[i].click = false;
 		links[i].addEventListener("mouseover", hover);
@@ -25,10 +25,15 @@ function openLink(link) {
 			switch (link.currentTarget.number) {
 				case 0:
 				case 1:
-				case 2:
 					window.location = "bio";
 					break;
+				case 2:
+					window.location = "https://www.ajc.com/news/black-homeowner-had-white-friend-stand-in-for-third-appraisal-value-doubled/2M63SDYAPJHETED7ZJUKUNMXP4/";
+					break;
 				case 3:
+					window.location = "bio";
+					break;
+				case 4:
 					window.location = "resources";
 					break;
 				default:
@@ -39,10 +44,15 @@ function openLink(link) {
 			switch (link.currentTarget.number) {
 				case 0:
 				case 1:
-				case 2:
 					window.open("bio");
 					break;
+				case 2:
+					window.open("https://www.ajc.com/news/black-homeowner-had-white-friend-stand-in-for-third-appraisal-value-doubled/2M63SDYAPJHETED7ZJUKUNMXP4/");
+					break;
 				case 3:
+					window.open("bio");
+					break;
+				case 4:
 					window.open("resources");
 					break;
 				default:
@@ -52,8 +62,8 @@ function openLink(link) {
 }
 
 function hover(link) {
-	out = (link.currentTarget.number == 1) ? "blue" : "white";
-	over = (link.currentTarget.number == 1) ? "deepskyblue" : "lightgray";
+	out = (link.currentTarget.number <= 2) ? "blue" : "white";
+	over = (link.currentTarget.number <= 2) ? "deepskyblue" : "lightgray";
 
 	if (link.currentTarget.hover) {
 		link.currentTarget.style.color = out;

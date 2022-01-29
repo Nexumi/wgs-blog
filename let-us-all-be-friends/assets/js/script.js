@@ -20,44 +20,27 @@ for (let i = 0; i < links.length; i++) {
 }
 
 function openLink(link) {
+	let target = "404";
+
+	switch (link.currentTarget.number) {
+		case 0:
+		case 1:
+		case 3:
+			target = "bio";
+			break;
+		case 2:
+			target = "https://www.ajc.com/news/black-homeowner-had-white-friend-stand-in-for-third-appraisal-value-doubled/2M63SDYAPJHETED7ZJUKUNMXP4/";
+			break;
+		case 4:
+			target = "resources";
+	}
+
 	switch (link.button) {
 		case 0:
-			switch (link.currentTarget.number) {
-				case 0:
-				case 1:
-					window.location = "bio";
-					break;
-				case 2:
-					window.location = "https://www.ajc.com/news/black-homeowner-had-white-friend-stand-in-for-third-appraisal-value-doubled/2M63SDYAPJHETED7ZJUKUNMXP4/";
-					break;
-				case 3:
-					window.location = "bio";
-					break;
-				case 4:
-					window.location = "resources";
-					break;
-				default:
-					window.location = "404";
-			}
+			window.location = target;
 			break;
 		case 1:
-			switch (link.currentTarget.number) {
-				case 0:
-				case 1:
-					window.open("bio");
-					break;
-				case 2:
-					window.open("https://www.ajc.com/news/black-homeowner-had-white-friend-stand-in-for-third-appraisal-value-doubled/2M63SDYAPJHETED7ZJUKUNMXP4/");
-					break;
-				case 3:
-					window.open("bio");
-					break;
-				case 4:
-					window.open("resources");
-					break;
-				default:
-					window.open("404");
-			}
+			window.open(target);
 	}
 }
 
